@@ -5,7 +5,7 @@ const { expect } = require('chai');
 describe('Consuming HEAD Mehtods', () => {
   let oldResponse;
   describe('When checking the page with HEAD', () => {
-    it('The the page should redirect', async () => {
+    it('Page should redirected', async () => {
       try {
         await agent.head('https://github.com/aperdomob/redirect-test');
       } catch (response) {
@@ -17,8 +17,8 @@ describe('Consuming HEAD Mehtods', () => {
     });
   });
 
-  describe('When checking the page with GET', () => {
-    it('The the page should redirect', async () => {
+  describe('checking the page with GET', () => {
+    it('The page should redirect', async () => {
       const response = await agent.get('https://github.com/aperdomob/redirect-test');
       expect(response.status).to.equal(statusCode.OK);
     });

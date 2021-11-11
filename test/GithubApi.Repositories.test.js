@@ -61,7 +61,7 @@ describe('Consuming GET Methods', () => {
   describe('When checking and dowloading the README file', () => {
     let readme;
 
-    it('Then the README file should be checked', async () => {
+    it(' README file should be checked', async () => {
       const response = await agent.get('https://api.github.com/repos/aperdomob/jasmine-awesome-report/contents/')
         .set('User-Agent', 'agent').auth('token', process.env.ACCESS_TOKEN);
       const readmeInfo = {

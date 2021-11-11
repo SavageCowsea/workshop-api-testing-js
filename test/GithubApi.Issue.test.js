@@ -14,7 +14,7 @@ describe('Consuming POST and PATCH Methods', () => {
     });
   });
 
-  describe('When checking if the user has at least a public repository', () => {
+  describe('Check if an user has at least a public repository', () => {
     it('Then the user should have a public repository', async () => {
       const response = await agent.get('https://api.github.com/user')
         .set('User-Agent', 'agent')

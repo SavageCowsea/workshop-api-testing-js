@@ -15,7 +15,7 @@ function wait(method, time) {
 }
 `;
 
-describe('Consuming DELETE Methods', () => {
+describe('Consuming DELETE Method', () => {
   let gist;
   const createGist = {
     description: 'this is an example about promise',
@@ -27,7 +27,7 @@ describe('Consuming DELETE Methods', () => {
     }
   };
   describe('When creating a gist', () => {
-    it('Then the gist should be created', async () => {
+    it('gist should be created', async () => {
       const response = await agent.post('https://api.github.com/gists')
         .send(createGist)
         .set('User-Agent', 'agent')
